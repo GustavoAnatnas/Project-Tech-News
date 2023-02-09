@@ -1,6 +1,7 @@
 import pip._vendor.requests as requests
 import time
 
+
 # Requisito 1
 def fetch(url):
     try:
@@ -16,6 +17,7 @@ def fetch(url):
 
 
 print(fetch("https://www.google.com/"))
+
 
 # Requisito 2
 def scrape_updates(html_content):
