@@ -1,5 +1,6 @@
 import pip._vendor.requests as requests
 import time
+from parsel import Selector
 
 
 # Requisito 1
@@ -16,12 +17,11 @@ def fetch(url):
         return None
 
 
-print(fetch("https://www.google.com/"))
-
-
 # Requisito 2
 def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+    sel = Selector(html_content)
+    urls = sel.css('a.cs-overlay-link::attr(href)').getall()
+    return urls
 
 
 # Requisito 3
