@@ -51,26 +51,6 @@ def scrape_news(html_content):
         .strip(),
     }
 
-    # selector = Selector(html_content)
-
-    # url = selector.css("link[rel=canonical]::attr(href)").get()
-    # title = selector.css(".entry-title::text").get().strip()
-    # timestamp = selector.css(".meta-date::text").get()
-    # writer = selector.css(".author a::text").get()
-    # reading_time = selector.css(".meta-reading-time::text").get()
-    # summary = selector.xpath("string(//p)").get().strip()
-    # category = selector.css(".meta-category span.label::text").get()
-
-    # return {
-    #     "url": url,
-    #     "title": title,
-    #     "timestamp": timestamp,
-    #     "writer": writer,
-    #     "reading_time": int("".join(re.findall(r"\d", reading_time))),
-    #     "summary": summary,
-    #     "category": category,
-    # }
-
 
 # Requisito 5
 def get_tech_news(amount):
